@@ -21,9 +21,8 @@ public class AdapterTest {
 	public void convert_from_object_to_another_one_when_equals_params() {
 		From from = new From(12, 12);
 		To to = new To("12", "12", WHITE);
-		ReflectionEquals eqTo = new ReflectionEquals(to);
 
-		assertTrue(eqTo.matches(Adapter.adapt(from)));
+		assertThat(Adapter.adapt(from), is(to));
 	}
 
 	@Test
