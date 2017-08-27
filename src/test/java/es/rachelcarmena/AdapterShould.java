@@ -7,7 +7,7 @@ import static es.rachelcarmena.To.status.WHITE;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class AdapterTest {
+public class AdapterShould {
 
 	@Test
 	public void convert_from_object_to_another_one_when_param1_less_than_param2() {
