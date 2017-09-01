@@ -11,6 +11,20 @@ Solution branch:
 * Without `equals` and `hashCode` methods
 * Using `EqualsBuilder.reflectionEquals` from _Apache Commons Lang_
 
+In order to see the differences:
+
+```
+git diff master solution
+```
+
+or:
+
+```
+git difftool master solution
+```
+
+if you have a tool for managing differences (config: `diff.tool`).
+
 ## Running mutation testing
 
 ```
