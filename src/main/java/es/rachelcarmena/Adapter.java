@@ -11,7 +11,7 @@ public class    Adapter {
         String arg1 = String.valueOf(from.getParam1());
         String arg2 = String.valueOf(from.getParam2());
 
-        status arg3 = ((from.getParam1() > from.getParam2())? BLACK: WHITE);
+        status arg3 = ((from.getParam1() < from.getParam2())? BLACK: WHITE);
 
         return new To(arg1, arg2, arg3);
     }
