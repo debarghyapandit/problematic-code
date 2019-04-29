@@ -39,5 +39,14 @@ if you have a tool for managing differences (config: `diff.tool`).
 mvn clean test; mvn org.pitest:pitest-maven:mutationCoverage
 ```
 
+## Results
+
+Apart from the results on console, there is a web page to navigate through the results in the `target` directory:
+
+```
+target/pit-reports/[YYYYMMDDHHMM]/index.html
+``` 
+
 ## Further reading
+
 [99% code coverage - Do we have a good safety net to change this legacy code?](https://rachelcarmena.github.io/2017/09/01/do-we-have-a-good-safety-net-to-change-this-legacy-code.html)
