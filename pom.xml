@@ -82,6 +82,41 @@
                 <artifactId>pitest-maven</artifactId>
                 <version>1.2.2</version>
             </plugin>
+			<plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.5.1</version>
+		<configuration>
+			<outputFormats>
+			 <outputFormat>XML</outputFormat>
+			 <outputFormat>HTML</outputFormat>
+         </outputFormats>
+		 <avoidCallsTo>
+			 <avoidCallsTo>org.apache.log4j.*</avoidCallsTo>
+			 <avoidCallsTo>org.slf4j.*</avoidCallsTo>
+         </avoidCallsTo>
+		<historyInputLocation>target/pitHistory.txt</historyInputLocation>
+		<historyOutputLocation>target/pitHistory.txt</historyOutputLocation>
+		<timestampedReports>false</timestampedReports>
+		<threads>5</threads>
+		</configuration>
+      </plugin>
         </plugins>
     </build>
+	<reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-maven</artifactId>
+            <version>1.5.1</version>
+            <reportSets>
+                <reportSet>
+                    <reports>
+                        <report>report</report>
+                    </reports>
+                </reportSet>
+            </reportSets>
+        </plugin>
+    </plugins>
+</reporting>
 </project>
